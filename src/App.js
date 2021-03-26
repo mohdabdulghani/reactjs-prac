@@ -14,9 +14,9 @@ function App() {
 
 
   return (
-    <div >
-      <h1>{count}</h1>
-      <button onClick={incrmt}>click me</button>
+    <div className= "App" >
+      <h1 >{count}</h1>
+      <button className = "kuch" onClick={incrmt}>click me</button>
       
     </div>
   );

@@ -27,7 +27,11 @@
 .App-link {
   color: #61dafb;
 }
-
+.kuch {
+  color: #000;
+  background-color: #61dafb;
+  border-radius: 2%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
