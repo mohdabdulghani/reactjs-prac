@@ -11,21 +11,41 @@ function App() {
   //   upcount(count+1);
   // }
   
-  const time = new Date().toLocaleTimeString(); 
+//   const time = new Date().toLocaleTimeString(); 
   
- const [stime,settime ] = useState(time)
- const timeup = () => {
-   let newtime = new Date().toLocaleTimeString(); 
-   settime(newtime)
+//  const [stime,settime ] = useState(time)
+//  const timeup = () => {
+//    let newtime = new Date().toLocaleTimeString(); 
+//    settime(newtime)
    
- }
- setInterval(timeup,1000)
+//  }
+//  setInterval(timeup,1000)
+
+let naam = "click"
+let dsnaam = "nakko karo"
+let purple = "#8e44ad";
+let green = "#34495e"
+const [bg, chbg] = useState(purple)
+const [pnaam,dnaam ] = useState(naam)
+const bgChange = () => {
+  chbg(green)
+  dnaam(dsnaam)
+
+  
+}
+
+
+const bgBack = () => {
+  chbg(purple)
+  dnaam(naam)
+}
 
 
   return (
-    <div className= "App" >
-      <h1 > {stime}</h1>
+    <div className= "App" style={{ backgroundColor:bg}} >
+      {/* <h1 > {stime}</h1> */}
       {/* <button className = "kuch" onClick={timeup} >click me</button>  */}
+      <button onClick={bgChange} onDoubleClick={bgBack}>{pnaam}</button>
       
     </div>
   );
