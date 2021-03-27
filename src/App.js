@@ -19,12 +19,13 @@ function App() {
    settime(newtime)
    
  }
+ setInterval(timeup,1000)
 
 
   return (
     <div className= "App" >
       <h1 > {stime}</h1>
-      <button className = "kuch" onClick={timeup} >click me</button>
+      {/* <button className = "kuch" onClick={timeup} >click me</button>  */}
       
     </div>
   );
