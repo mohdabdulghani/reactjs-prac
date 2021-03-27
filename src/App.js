@@ -45,7 +45,7 @@ const bgBack = () => {
     <div className= "App" style={{ backgroundColor:bg}} >
       {/* <h1 > {stime}</h1> */}
       {/* <button className = "kuch" onClick={timeup} >click me</button>  */}
-      <button onClick={bgChange} onDoubleClick={bgBack}>{pnaam}</button>
+      <button onMouseEnter={bgChange} onMouseLeave={bgBack}>{pnaam}</button>
       
     </div>
   );
