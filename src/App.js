@@ -71,6 +71,7 @@ const submit = () => {
   naItem("")
   
 }
+const star = "*"
 
 
 
@@ -90,9 +91,10 @@ const submit = () => {
       <button onClick={submit} >click me</button>
       
     {fnItem.map((list) => {
-        return <ul>
-                <li>{list}</li>
-                  </ul>
+        return  <li>{list}</li>
+             
+               
+                  
     })}
      
     </div>
