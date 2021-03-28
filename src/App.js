@@ -40,25 +40,37 @@ function App() {
 //   dnaam(naam)
 // }
 const [setNaam,upName ] = useState("")
-const [setName, setFull] = useState()
+const [setName, setFull] = useState("")
+const [dusra,pehla] = useState("")
+const [nayaDusra,nayaPehla ] = useState("")
 const namch = (e) => {
 // console.log(e.target.value)
 upName(e.target.value)
 }
-const stName = () => {
+const stName = (e) => {
+  e.preventDefault(); 
   setFull(setNaam)
+  nayaPehla(dusra)
+
+} 
+const chan = (e) => {
+  // console.log(e.target.value)
+  pehla(e.target.value)
 }
+
 
 
   return (
     <div className= "App"  >
+      <form onClick={stName} >
       {/* <h1 > {stime}</h1> */}
       {/* <button className = "kuch" onClick={timeup} >click me</button>  */}
       {/* <button onMouseEnter={bgChange} onMouseLeave={bgBack}>{pnaam}</button> */}
-      <h1>Hello {setName}</h1>
-      <input onChange={namch} type="text" placeholder="enter your name" />
-      <div><button onClick={stName}>click me</button></div>
-      
+      <h1>Hello {setName}  {nayaDusra}  </h1>
+      <input onChange={namch} type="text" placeholder="enter your first name" /><br />
+      <input onChange={chan} type="text" placeholder="enter your last name" />
+      <div><button type = "submit">click me</button></div>
+      </form>
     </div>
   );
 }
