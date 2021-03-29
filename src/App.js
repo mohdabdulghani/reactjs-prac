@@ -91,8 +91,9 @@ const star = "*"
       <button onClick={submit} >click me</button>
       
     {fnItem.map((list) => {
+      <ol>
         return  <li>{list}</li>
-             
+          </ol>   
                
                   
     })}
