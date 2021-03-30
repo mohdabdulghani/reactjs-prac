@@ -58,29 +58,41 @@ function App() {
 //   console.log(e.target.value)
 //   pehla(e.target.value)
 // }
-const [item,naItem ] = useState("")
-const [fnItem,edItem] = useState([])
+// const [item,naItem ] = useState("")
+// const [fnItem,edItem] = useState([])
 
-const some = (e) => {
-  // console.log(e.target.value)
-  naItem(e.target.value)
-}
-const submit = () => {
-  edItem((oldItem)=>{
-    return[...oldItem, item]
-  })
-  naItem("")
+// const some = (e) => {
+//   // console.log(e.target.value)
+//   naItem(e.target.value)
+// }
+// const submit = () => {
+//   edItem((oldItem)=>{
+//     return[...oldItem, item]
+//   })
+//   naItem("")
   
+// }
+// const removeItem = (id) => {
+//   // console.log("hello world")
+//   edItem((oldItem) => {
+//     return oldItem.filter((elem,index) => {
+//       return index !== id;
+//     })
+//   })
+//}
+const [num,upnum ] = useState(0)
+const inc = () => {
+  // console.log("hello world")
+  upnum(num+1);
 }
-const removeItem = (id) => {
-  console.log("hello world")
-  edItem((oldItem) => {
-    return oldItem.filter((elem,index) => {
-      return index !== id;
-    })
-  })
+const dec =() => {
+  // console.log("chel")
+  if(num > 0){
+  upnum(num-1);
+  }else{
+    alert("you've exceed the lowest value")
+  }
 }
-
 
 
 
@@ -95,7 +107,7 @@ const removeItem = (id) => {
       <input onChange={chan} type="text" placeholder="enter your last name" />
       <div><button type = "submit">click me</button></div> */}
       {/* </form> */}
-      <h1>To Do List</h1>
+      {/* <h1>To Do List</h1>
       <input type="text" value={item} placeholder="enter your lsit" onChange={some} />
       <button onClick={submit} >click me</button>
       <ol>
@@ -112,7 +124,10 @@ const removeItem = (id) => {
     })}
       
       </ol> 
-          
+    </div> */}
+         <h1>{num}</h1> 
+         <button onClick={inc}>increment</button>
+         <button onClick={dec}>decrement</button>
        
         
        
