@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from './logo.svg';
+import Todolist from "./Todolist";
+// import logo from './logo.svg';
 
 import './App.css';
 
@@ -71,7 +72,15 @@ const submit = () => {
   naItem("")
   
 }
-const star = "*"
+const removeItem = (id) => {
+  console.log("hello world")
+  edItem((oldItem) => {
+    return oldItem.filter((elem,index) => {
+      return index !== id;
+    })
+  })
+}
+
 
 
 
@@ -89,14 +98,26 @@ const star = "*"
       <h1>To Do List</h1>
       <input type="text" value={item} placeholder="enter your lsit" onChange={some} />
       <button onClick={submit} >click me</button>
-      
-    {fnItem.map((list) => {
       <ol>
-        return  <li>{list}</li>
-          </ol>   
+    {fnItem.map((list, index) => {
+      return( 
+      
+      <Todolist
+       text={list} 
+       onSelect={removeItem}
+       id={index}
+       key={index}
+       />
+      );
+    })}
+      
+      </ol> 
+          
+       
+        
+       
                
                   
-    })}
      
     </div>
   );
