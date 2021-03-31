@@ -85,14 +85,15 @@ const inc = () => {
   // console.log("hello world")
   upnum(num+1);
 }
-const dec =() => {
-  // console.log("chel")
-  if(num > 0){
-  upnum(num-1);
-  }else{
-    alert("you've exceed the lowest value")
-  }
-}
+document.title = `you've clicked ${num} times`
+// const dec =() => {
+//   // console.log("chel")
+//   if(num > 0){
+//   upnum(num-1);
+//   }else{
+//     alert("you've exceed the lowest value")
+//   }
+// }
 
 
 
@@ -127,14 +128,14 @@ const dec =() => {
     </div> */}
          <h1>{num}</h1> 
          <button onClick={inc}>increment</button>
-         <button onClick={dec}>decrement</button>
+         {/* <button onClick={dec}>decrement</button> */}
        
+    </div>
         
        
                
                   
      
-    </div>
   );
 }
 
