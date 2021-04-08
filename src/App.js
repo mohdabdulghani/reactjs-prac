@@ -85,7 +85,8 @@ const inc = () => {
   // console.log("hello world")
   upnum(num+1);
 }
-document.title = `you've clicked ${num} times`
+
+// document.title = `you've clicked ${num} times`
 // const dec =() => {
 //   // console.log("chel")
 //   if(num > 0){
